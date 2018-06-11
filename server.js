@@ -10,7 +10,7 @@ const projectHandler = (event, action) => {
 	const branch = event.payload.ref
 	const project = event.payload.repository.name
 	const message = event.payload.head_commit.message || ''
-	if (projects.includes(project) && message.includes('doDeploy')) {
+	if (projects.includes(project) && message.includes('Deploy')) {
 		console.log(new Date(), `收到一个关于项目 ${project} - ${branch} 分支的 ${action} 事件，要求服务端部署！`)
 		shell.exec(`sh ./projects/${project}.sh`, (code, stdout, stderr) => {
 		  console.log(new Date(), 'Exit code:', code)
