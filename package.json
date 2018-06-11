@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "github-webhook-handler": "^0.7.1",
+    "shelljs": "^0.8.2"
+  }
+}
