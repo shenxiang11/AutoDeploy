@@ -22,7 +22,7 @@ const projectHandler = (event, action) => {
 http.createServer((req, res) => {
 	handler(req, res, err => {
 		res.statusCode = 404
-		res.end('自动化部署之旅！')
+		res.end('hehe')
 	})
 }).listen(port, () => {
   console.log(new Date(), `Deploy server Run！port at ${port}`)
