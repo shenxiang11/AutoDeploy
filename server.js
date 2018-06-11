@@ -1,7 +1,7 @@
 const http = require('http')
 const shell = require('shelljs')
 const createHandler = require('github-webhook-handler')
-const handler = createHandler({ path: '/webhook', secret: 'surmon' })
+const handler = createHandler({ path: '/webhook', secret: 'xbbzzz' })
 
 const port = 9988
 const projects = ['autodeploy']
