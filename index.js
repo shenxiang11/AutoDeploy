@@ -12,7 +12,7 @@ const projectHandler = (event, action) => {
 	const message = event.payload.head_commit.message || ''
 	if (projects.includes(project) && message.includes('Deploy')) {
 		console.log(new Date(), `收到一个关于项目 ${project} - ${branch} 分支的 ${action} 事件，要求服务端部署！`)
-		shell.exec('sh ./projects/' + project + '.sh', (code, stdout, stderr) => {
+		shell.exec(`sh ./projects/${project}.sh`, (code, stdout, stderr) => {
 		  console.log(new Date(), 'Exit code:', code)
 		  console.log(new Date(), '执行完毕！错误信息：', stderr)
 		})
@@ -26,7 +26,8 @@ http.createServer((req, res) => {
 	})
 }).listen(port, () => {
   console.log(new Date(), `Deploy server Run！port at ${port}`)
-  shell.exec('echo shell test OK!', (code, stdout, stderr) => {})
+  shell.exec('echo shell test OK!')
+  shell.exec('sh ./projects/AutoDeploy.sh')
 })
 
 handler.on('error', err => {
