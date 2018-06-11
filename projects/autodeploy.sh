@@ -1,11 +1,10 @@
-WEB_PATH='/root/deploy'
+WEB_PATH='/root/AutoDeploy'
  
-echo "Start deployment deploy"
+echo "Start deployment AutoDeploy"
 cd $WEB_PATH
 echo "pulling source code..."
 
 git pull
-git checkout master
 
-pm2 restart ./server.js --name 'autodeploy'
+pm2 restart ./ecosystem.config.js
 echo "Finished."
