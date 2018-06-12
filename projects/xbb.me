@@ -1,0 +1,13 @@
+WEB_PATH='/root/xbb.me'
+ 
+echo "开始部署"
+cd $WEB_PATH
+echo "获取最新代码"
+
+git pull
+
+yarn build
+
+yarn start
+
+echo "已重启"
