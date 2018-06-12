@@ -119,9 +119,9 @@ resolve@^1.1.6:
   dependencies:
     path-parse "^1.0.5"
 
-shelljs@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.npmjs.org/shelljs/-/shelljs-0.8.2.tgz#345b7df7763f4c2340d584abb532c5f752ca9e35"
+shelljs@0.7.5:
+  version "0.7.5"
+  resolved "https://registry.npmjs.org/shelljs/-/shelljs-0.7.5.tgz#2eef7a50a21e1ccf37da00df767ec69e30ad0675"
   dependencies:
     glob "^7.0.0"
     interpret "^1.0.0"
