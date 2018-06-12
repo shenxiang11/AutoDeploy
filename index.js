@@ -4,7 +4,7 @@ const createHandler = require('github-webhook-handler')
 const handler = createHandler({ path: '/webhook', secret: 'xbbzzz' })
 
 const port = 9988
-const projects = ['AutoDeploy', 'xbb-support', 'xbb.me']
+const projects = ['AutoDeploy', 'xbb-support', 'xbb.me', 'xbb-admin']
 
 const projectHandler = (event, action) => {
 	const branch = event.payload.ref
