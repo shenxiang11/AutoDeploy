@@ -1,10 +1,10 @@
 WEB_PATH='/root/AutoDeploy'
  
-echo "Start deployment AutoDeploy"
+echo "开始部署"
 cd $WEB_PATH
-echo "pulling source code..."
+echo "获取最新代码"
 
 git pull
 
 pm2 restart ./ecosystem.config.js
-echo "Finished."
+echo "已重启"
