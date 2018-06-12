@@ -6,6 +6,8 @@ echo "获取最新代码"
 
 git pull
 
+yarn
+
 yarn build
 
 echo "已重启"
