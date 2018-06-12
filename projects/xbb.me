@@ -1,5 +1,8 @@
 WEB_PATH='/root/xbb.me'
  
+pm2 stop main
+pm2 delete main
+
 echo "开始部署"
 cd $WEB_PATH
 echo "获取最新代码"
@@ -10,8 +13,6 @@ yarn
 
 yarn build
 
-pm2 stop main
-
-yarn restart
+yarn start
 
 echo "已重启"
