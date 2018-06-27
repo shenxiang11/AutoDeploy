@@ -8,8 +8,6 @@ git pull
 
 yarn
 
-tsc
-
 yarn prod
 
 echo "已重启"
